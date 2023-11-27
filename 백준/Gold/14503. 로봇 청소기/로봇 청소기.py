@@ -20,12 +20,12 @@ while True:
         d = (d+3) % 4 # 반시계 회전
         nx = x + dx[d]
         ny = y + dy[d]
-        #if nx >= 0 and nx < n and ny >= 0 and ny < m:
-        if room[nx][ny] == 0:  # 청소할 방이면 전진 # 1로 돌아감
-            flag = True  # 청소할 방 발견
-            x = nx
-            y = ny
-            break
+        if nx >= 0 and nx < n and ny >= 0 and ny < m:
+            if room[nx][ny] == 0:  # 청소할 방이면 전진 # 1로 돌아감
+                flag = True  # 청소할 방 발견
+                x = nx
+                y = ny
+                break
     if flag == False:  # 후진하고 벽이 있으면 끝
         b = (d + 2) % 4
         nx = x + dx[b]
