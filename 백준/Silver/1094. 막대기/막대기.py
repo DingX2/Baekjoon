@@ -1,12 +1,19 @@
 import sys
+
 input = sys.stdin.readline
-N = int(input())
-result = 0
-branch = 64
-branch_sum =0
-while N!=branch_sum:
-    if branch+branch_sum<=N:
-        branch_sum += branch
-        result += 1
-    branch /= 2
-print(result)
+
+
+def solution():
+    stick, cnt = 64, 0
+    X = int(input())
+    stick_sum = 0
+    while stick_sum != X:
+        if stick_sum + stick <= X:
+            stick_sum += stick
+            cnt += 1
+        stick /= 2
+
+    print(cnt)
+
+
+solution()
