@@ -1,24 +1,33 @@
-n, m = map(int,input().split())
-time = list(map(int,input().split()))
+import sys
 
-start = max(time)
-end = sum(time)
+input = sys.stdin.readline
 
-while start <= end:
-    mid = (start + end) // 2 
 
-    total = 0
-    count = 1
-    for t in time:
-        if total + t > mid:
-            count += 1
-            total = 0
-        total += t 
+def solution():
+    N, M = map(int, input().split())
+    bluerays = list(map(int, input().split()))
+    answer = 0
 
-    if count <= m:
-        ans = mid
-        end = mid - 1
-    else:
-        start = mid + 1
-    
-print(ans)
+    start = max(bluerays)
+    end = sum(bluerays)
+
+    while start <= end:
+        cnt = 1
+        mid = (start + end) // 2
+        temp = 0
+        for blueray in bluerays:
+            if temp + blueray > mid:
+                cnt += 1
+                temp = 0
+            temp += blueray
+
+        if cnt > M:
+            start = mid + 1
+        elif cnt <= M:
+            end = mid - 1
+            answer = mid
+
+    print(answer)
+
+
+solution()
