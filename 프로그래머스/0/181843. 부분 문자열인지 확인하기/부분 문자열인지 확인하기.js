@@ -1,0 +1,1 @@
+solution = ($, _) => +$.includes(_);
