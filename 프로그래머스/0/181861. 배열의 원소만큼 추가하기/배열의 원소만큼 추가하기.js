@@ -1,0 +1,1 @@
+solution = (a) => a.map(($)=> Array.from({length: $}).fill($)).flat() 
