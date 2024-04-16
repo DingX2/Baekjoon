@@ -1,0 +1,1 @@
+solution = (m, p) => +[...m].map((i)=>i === 'A' ? 'B' : 'A').join('').includes(p)
