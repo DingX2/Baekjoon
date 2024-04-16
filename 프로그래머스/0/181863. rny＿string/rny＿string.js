@@ -1,0 +1,1 @@
+solution = (s) => s.replaceAll('m', 'rn')
