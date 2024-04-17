@@ -1,0 +1,1 @@
+solution = (strArr) => strArr.map((char, index)=> index % 2 ? char.toUpperCase() : char.toLowerCase())
