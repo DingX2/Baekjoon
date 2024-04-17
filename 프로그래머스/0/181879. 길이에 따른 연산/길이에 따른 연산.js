@@ -1,0 +1,1 @@
+solution = (l) => l.length >= 11 ? l.reduce((a,c)=> a+c) : l.reduce((a,c)=> a*c)
