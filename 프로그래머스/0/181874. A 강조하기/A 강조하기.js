@@ -1,7 +1,1 @@
-solution = (s) => {
-    return [...s].map((c)=>{
-        if (c !=='A'){ 
-            return c.toLowerCase();
-        }else return c
-    }).join('').replaceAll('a','A');
-}
+solution = (s) => s.toLowerCase().replaceAll('a','A');
