@@ -1,0 +1,1 @@
+solution = (s, t) => [...s].map((c)=> c===t ? c.toUpperCase() : c).join('')
