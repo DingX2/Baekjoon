@@ -1,0 +1,1 @@
+solution = (l) => l.findIndex(i => i < 0)
