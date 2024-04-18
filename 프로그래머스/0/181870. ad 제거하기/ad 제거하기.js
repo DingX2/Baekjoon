@@ -1,0 +1,1 @@
+solution = (strArr) => strArr.filter(item=> !item.includes('ad'))
