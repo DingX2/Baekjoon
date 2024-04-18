@@ -1,0 +1,1 @@
+solution = (number) => [...number].reduce((a, c)=> +a + +c) % 9
