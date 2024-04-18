@@ -1,0 +1,1 @@
+solution = (_, $) => _.filter((a, i) => i%$ ? null : a )
