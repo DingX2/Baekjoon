@@ -1,0 +1,1 @@
+solution = (a, l) => a.map(c => l.includes(c) ? '' : c).filter(i=>i!="")
