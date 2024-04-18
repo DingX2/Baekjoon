@@ -1,0 +1,1 @@
+solution= (myString) => [...myString].map(char=>char<'l' ? 'l' : char).join('')
