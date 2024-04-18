@@ -1,0 +1,1 @@
+solution = (a, b, f) => f ? a+b : a-b
