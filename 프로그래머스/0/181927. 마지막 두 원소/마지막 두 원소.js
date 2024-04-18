@@ -1,0 +1,1 @@
+solution = (l) => (l.push(l[l.length-1] > l[l.length -2] ? l[l.length-1]-l[l.length -2] : l[l.length-1]*2) && l)
