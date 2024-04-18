@@ -1,21 +1,11 @@
 solution = (numLog, answer = '') => {
+    const convert = {
+        '1' : 's', '-1' : 'w', '10' : 'a', '-10' : 'd'
+    }
+    
     for (let i = 1; i < numLog.length; i++){
         let key = numLog[i-1] - numLog[i];
-        switch(key){
-            case 1 : 
-                answer += 's';
-                break;
-            case -1 :
-                answer += 'w';
-                break;
-            case 10 :
-                answer += 'a';
-                break;
-            case -10 :
-                answer += 'd';
-                break;
-            default: 
-        }
+        answer += convert[key]
     }
     return answer
 }
