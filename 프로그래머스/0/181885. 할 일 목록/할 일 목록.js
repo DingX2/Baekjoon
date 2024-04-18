@@ -1,0 +1,1 @@
+solution = (l, f) => l.filter((item, i)=> !f[i])
