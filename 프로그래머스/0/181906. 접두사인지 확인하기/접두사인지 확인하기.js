@@ -1,0 +1,1 @@
+solution = (s, $) => s.indexOf($) ? 0 : 1
