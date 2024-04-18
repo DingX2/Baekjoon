@@ -1,0 +1,1 @@
+solution = (l) => l.filter((n, i)=> i <= l.length && i%5 ===0)
