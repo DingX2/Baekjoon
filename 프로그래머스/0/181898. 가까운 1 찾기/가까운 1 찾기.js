@@ -1,0 +1,1 @@
+solution = (arr, idx) => arr.indexOf(1, idx)
