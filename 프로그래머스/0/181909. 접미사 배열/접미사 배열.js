@@ -1,0 +1,1 @@
+solution = (s) => [...s].map((key, index)=> s.slice(index, s.length)).sort()
