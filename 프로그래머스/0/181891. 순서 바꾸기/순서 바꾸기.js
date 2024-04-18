@@ -1,0 +1,1 @@
+solution = (l, n) => l.slice(n, l.length).concat(l.slice(0, n))
