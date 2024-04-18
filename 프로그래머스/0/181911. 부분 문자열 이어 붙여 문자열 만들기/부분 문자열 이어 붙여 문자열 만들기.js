@@ -1,0 +1,1 @@
+solution = (s, p) => s.map((a,i)=> a.slice(p[i][0], p[i][1]+1)).join('')
