@@ -1,0 +1,1 @@
+solution = (s, i) =>  [...s].reverse().join('').indexOf([...i].reverse().join(''))?0:1
