@@ -1,0 +1,1 @@
+solution = (_, k) => _.repeat(k)
