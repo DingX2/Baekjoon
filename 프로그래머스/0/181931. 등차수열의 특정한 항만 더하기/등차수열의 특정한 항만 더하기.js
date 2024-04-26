@@ -1,0 +1,1 @@
+solution = (a, d, included) => included.reduce((acc, item, index)=> item ? acc + a+d*index : acc, 0)
