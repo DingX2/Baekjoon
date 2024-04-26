@@ -1,0 +1,1 @@
+solution = (a, _, X = []) => (_.map((b, i)=>{b ? X.push(...Array(2*a[i]).fill(a[i])) : X.splice(-a[i])}), X)
