@@ -1,0 +1,1 @@
+solution = ($, _, s) => $.substring(0,s) + _ + $.substring(s+_.length, $.length)
