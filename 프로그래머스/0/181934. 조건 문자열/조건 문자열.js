@@ -1,0 +1,1 @@
+solution = (ineq, eq, n, m) => eq === '=' && n===m ? 1 : ineq === '>' ? +(n>m) : ineq === '<' ? +(n<m) : 0
