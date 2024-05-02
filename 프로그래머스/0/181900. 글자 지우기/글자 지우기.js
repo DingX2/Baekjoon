@@ -1,0 +1,1 @@
+solution = (_, $) => [..._].map((_, i) => $.includes(i) ? null : _ ).filter(Boolean).join('')
