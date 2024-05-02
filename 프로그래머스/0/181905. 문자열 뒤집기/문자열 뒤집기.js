@@ -1,0 +1,1 @@
+solution = ($, s, e) => $.slice(0, s) + [...$.slice(s, e+1)].reverse().join('') + $.slice(e+1, $.length)
