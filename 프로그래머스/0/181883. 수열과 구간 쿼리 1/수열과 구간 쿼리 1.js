@@ -1,0 +1,1 @@
+solution = ($, q) => q.reduce((_, [s, e]) => _.map((v, i) => (i >= s && i <= e) ? v + 1 : v), $);
