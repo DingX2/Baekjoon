@@ -1,0 +1,1 @@
+solution = (_, k, s, l) => _.map(a=>parseInt(a.slice(s, s+l), 10)).filter(n => n>k)
