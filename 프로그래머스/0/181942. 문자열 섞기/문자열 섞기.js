@@ -1,0 +1,1 @@
+solution = (str1, str2) => [...str1].map((item, index)=> str1[index]+str2[index]).join('')
