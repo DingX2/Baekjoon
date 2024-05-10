@@ -1,0 +1,1 @@
+solution = ($, q) => (q.forEach(item=> $ = $.slice(0, item[0]) + $.slice(item[0], item[1]+1).split("").reverse().join("") + $.slice(item[1]+1, $.length)),$);
