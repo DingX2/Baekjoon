@@ -1,0 +1,1 @@
+const solution = (n) => [...(n+"")].reduce((acc,cur) => acc+ +cur, 0);
