@@ -9,36 +9,21 @@ const solution = () => {
   const chess_board = input.slice(1);
   let answer = 64;
 
-  const count_check_board = (i, j) => {
-    let IsStartB = 0;
-    let IsStartW = 0;
+  const count_check_board = (startRow, startCol) => {
+    let mismatchW = 0;
+    let mismatchB = 0;
 
-    const sliced_chess_board = chess_board.slice(i, i + 8);
-    //console.log("sliced_chess_board", sliced_chess_board);
+    for (let i = 0; i < 8; i++) {
+      for (let j = 0; j < 8; j++) {
+        const expectedW = (i + j) % 2 === 0 ? "W" : "B";
+        const expectedB = (i + j) % 2 === 0 ? "B" : "W";
 
-    for (const [i, chess_row] of sliced_chess_board.entries()) {
-      const sliced_chess = chess_row.slice(j, j + 8);
-      for (const [j, el] of [...sliced_chess].entries()) {
-        if (i % 2 == 0) {
-          //첫행
-          if (j % 2 === 0) {
-            //첫시작 WBW
-            el === "B" ? (IsStartW += 1) : (IsStartB += 1);
-          } else {
-            el === "W" ? (IsStartW += 1) : (IsStartB += 1);
-          }
-        } else {
-          if (j % 2 === 0) {
-            //첫시작 BWB
-            el === "W" ? (IsStartW += 1) : (IsStartB += 1);
-          } else {
-            el === "B" ? (IsStartW += 1) : (IsStartB += 1);
-          }
-        }
+        const actual = chess_board[startRow + i][startCol + j];
+        if (actual !== expectedW) mismatchW++;
+        if (actual !== expectedB) mismatchB++;
       }
     }
-    //console.log(IsStartB, IsStartW);
-    return Math.min(IsStartB, IsStartW);
+    return Math.min(mismatchW, mismatchB);
   };
 
   for (let i = 0; i <= N - 8; i++) {
