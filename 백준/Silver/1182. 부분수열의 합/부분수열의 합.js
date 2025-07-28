@@ -10,35 +10,19 @@ const solution = () => {
   const numbers = input[1].split(" ").map(Number);
   //console.log(N, S, numbers);
 
-  const combination = (origin) => {
-    const result = [];
-
-    const dfs = (idx, temp) => {
-      if (idx === origin.length) {
-        if (temp.length > 0) {
-          result.push([...temp]);
-        }
-        return;
+  const dfs = (idx, sum) => {
+    if (idx === N) {
+      if (S === sum) {
+        answer += 1;
       }
-
-      temp.push(origin[idx]);
-      dfs(idx + 1, temp);
-      temp.pop();
-      dfs(idx + 1, temp);
-    };
-
-    dfs(0, []);
-    return result;
+      return;
+    }
+    dfs(idx + 1, sum + numbers[idx]);
+    dfs(idx + 1, sum);
   };
 
-  const comb_arrays = combination(numbers);
-  //console.log(comb_arrays);
-  for (const comb of comb_arrays) {
-    if (S === comb.reduce((a, b) => a + b, 0)) {
-      answer += 1;
-    }
-  }
+  dfs(0, 0);
 
-  return answer;
+  return S === 0 ? answer - 1 : answer;
 };
 console.log(solution());
