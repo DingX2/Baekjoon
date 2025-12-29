@@ -1,5 +1,5 @@
 const fs = require("fs");
-const input = fs.readFileSync("/dev/stdin").toString().trim().split("\n");
+const input = fs.readFileSync("/dev/stdin").toString().trim().split(/\r?\n/);
 
 const solution = (input) => {
   const S = input[0];
@@ -13,12 +13,13 @@ const solution = (input) => {
     }
     if (current.length === 0) return;
 
-    if (current[current.length - 1] === "A") {
+    const last = current[current.length - 1];
+    if (last === "A") {
       dfs(current.slice(0, -1));
     }
 
     if (current[0] === "B") {
-      dfs([...current.slice(1)].reverse().join(""));
+      dfs(current.slice(1).split("").reverse().join(""));
     }
   };
 
@@ -26,3 +27,4 @@ const solution = (input) => {
   return answer;
 };
 console.log(solution(input));
+
